@@ -135,11 +135,7 @@ void * popBack(List * list) {
 }
 
 void * popCurrent(List * list) {
-
-   if (list == NULL || list->current == NULL) {
-        return NULL; // Si la lista o el current son nulos, no se puede hacer nada
-    }
-   
+  
     void * dato = list->current->data;
    
     free(list->current); 
