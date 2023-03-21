@@ -141,28 +141,8 @@ void * popCurrent(List * list) {
     }
    
     void * dato = list->current->data;
-    if (list->current == list->head && list->current == list->tail) {
-        // Si solo hay un nodo en la lista, hay que inicializar la lista vacía
-        list->head = NULL;
-        list->tail = NULL;
-        list->current = NULL;
-    } else if (list->current == list->head) {
-        // Si el current es el primer nodo de la lista
-        list->head = list->current->next;
-        list->head->prev = NULL;
-        list->current = list->head;
-    } else if (list->current == list->tail) {
-        // Si el current es el último nodo de la lista
-        list->tail = list->current->prev;
-        list->tail->next = NULL;
-        list->current = list->tail;
-    } else {
-        // Si el current está en algún lugar intermedio de la lista
-        list->current->prev->next = list->current->next;
-        list->current->next->prev = list->current->prev;
-        list->current = list->current->next;
-    }
-    free(list->current); // Liberar la memoria del nodo eliminado
+   
+    free(list->current); 
     return dato;
 
 
