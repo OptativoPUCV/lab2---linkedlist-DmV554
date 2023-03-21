@@ -44,7 +44,7 @@ void * firstList(List * list) {
 
     void*dato = cabeza->data;
   
-    return NULL;
+    return dato;
 }
 
 void * nextList(List * list) {
