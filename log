@@ -321,3 +321,12 @@ Tue 21 Mar 2023 03:29:52 AM UTC:
  tests:  11|1
 total_score: 55/70
 0da3c79
+Tue 21 Mar 2023 03:32:53 AM UTC: 
+ list.c | 32 ++++++++++++++++++++++++--------
+ 1 file changed, 24 insertions(+), 8 deletions(-)
+In file included from test.c:5:
+list.c:169:1: error: expected identifier or ‘(’ before ‘}’ token
+  169 | }
+      | ^
+Compilation failed
+478eb1a
