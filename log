@@ -192,3 +192,15 @@ Tue 21 Mar 2023 01:43:36 AM UTC:
  tests:  9|3
 total_score: 35/70
 604c317
+Tue 21 Mar 2023 01:45:52 AM UTC: 
+ list.c | 9 +++++++--
+ 1 file changed, 7 insertions(+), 2 deletions(-)
+In file included from test.c:5:
+list.c: In function ‘pushFront’:
+list.c:91:28: error: ‘newNode’ undeclared (first use in this function); did you mean ‘Node’?
+   91 |         list->head->prev = newNode;
+      |                            ^~~~~~~
+      |                            Node
+list.c:91:28: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+6bc0067

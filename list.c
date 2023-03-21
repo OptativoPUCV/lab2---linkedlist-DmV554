@@ -84,9 +84,14 @@ void pushFront(List * list, void * data) {
   
   Node * nodoAInsertar = createNode(data);
 
-  nodoAInsertar->next = list->head;
   nodoAInsertar->prev = NULL;
-  list->head = nodoAInsertar;
+  nodoAInsertar->next = list->head;
+  
+  if (list->head != NULL) {
+        list->head->prev = newNode;
+    }
+
+   list->head = newNode;
   
 }
 
