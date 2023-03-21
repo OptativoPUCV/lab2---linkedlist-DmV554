@@ -78,6 +78,15 @@ void * prevList(List * list) {
 }
 
 void pushFront(List * list, void * data) {
+  Node * nodoAInsertar = createNode(data);
+
+  nodoAInsertar->prev = NULL;
+  nodoAInsertar->next = list->head;
+
+  list->head->prev = nodoAInsertar;
+
+  nodoAInsertar = list->head;
+  
 }
 
 void pushBack(List * list, void * data) {
