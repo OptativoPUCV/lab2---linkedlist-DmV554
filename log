@@ -157,3 +157,20 @@ Tue 21 Mar 2023 01:40:59 AM UTC:
  tests:  9|3
 total_score: 35/70
 8e2fef5
+Tue 21 Mar 2023 01:41:32 AM UTC: 
+ list.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:5:
+list.c: In function ‘pushFront’:
+list.c:85:43: error: unknown type name ‘n’
+   85 |   Node * nodoAInsertar = createNode(data);n
+      |                                           ^
+list.c:87:16: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘->’ token
+   87 |   nodoAInsertar->next = list->head;
+      |                ^~
+list.c:85:10: error: variable ‘nodoAInsertar’ set but not used [-Werror=unused-but-set-variable]
+   85 |   Node * nodoAInsertar = createNode(data);n
+      |          ^~~~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+d14ed0e

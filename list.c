@@ -78,11 +78,11 @@ void * prevList(List * list) {
 }
 
 void pushFront(List * list, void * data) {
-  Node * nodoAInsertar = createNode(data);
-
-  if (list == NULL || list->head == NULL) {
+   if (list == NULL || list->head == NULL) {
         return;
     }
+  
+  Node * nodoAInsertar = createNode(data);n
 
   nodoAInsertar->next = list->head;
   nodoAInsertar = list->head;
