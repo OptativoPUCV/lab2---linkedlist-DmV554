@@ -38,20 +38,20 @@ List * createList() {
 }
 
 void * firstList(List * list) {
-    Node *cabeza = list->head;
+    //Node *cabeza = list->head;
     //list->current->next = list->head;
-    list->current = cabeza;
+    //list->current = cabeza;
 
-    void*dato = cabeza->data;
+    //void*dato = cabeza->data;
   
-    return dato;
+    return NULL;
 }
 
 void * nextList(List * list) {
     //list->current->next = list->current->next;
     //list->current = list->current->next;
 
-    return list->current->next->data;
+    return NULL;
 }
 
 void * lastList(List * list) {
