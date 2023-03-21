@@ -99,6 +99,13 @@ void pushBack(List * list, void * data) {
 }
 
 void pushCurrent(List * list, void * data) {
+  Node * nodoAInsertar = createNode(data);
+
+  list->current->next = nodoAInsertar;
+
+  nodoAInsertar->prev = list->current;
+
+  
 }
 
 void * popFront(List * list) {
