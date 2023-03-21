@@ -138,7 +138,6 @@ void * popCurrent(List * list) {
   
     void * dato = list->current->data;
    
-    free(list->current); 
     return dato;
 
 
