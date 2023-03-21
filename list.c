@@ -104,18 +104,18 @@ void pushCurrent(List * list, void * data) {
   nodoAInsertar->prev = list->current;
   
   if(list->current != NULL) {
+    nodoAInsertar->next = list->current->next;
+    
+    if(list->current->next != NULL) {
+      list->current->next->prev = nodoAInsertar;
+    }
     list->current->next = nodoAInsertar;
     
   } else {
-    list->head = nodoAInsertar;
     list->tail = nodoAInsertar;
+    list->head = nodoAInsertar;
     list->current = nodoAInsertar;
   }
-
-  
-
- 
-
   
 }
 
