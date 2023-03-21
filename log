@@ -315,3 +315,9 @@ Tue 21 Mar 2023 03:28:24 AM UTC:
  1 file changed, 4 deletions(-)
  tests:  0|0
 7bb3a7f
+Tue 21 Mar 2023 03:29:52 AM UTC: 
+ list.c | 14 ++++----------
+ 1 file changed, 4 insertions(+), 10 deletions(-)
+ tests:  11|1
+total_score: 55/70
+0da3c79
