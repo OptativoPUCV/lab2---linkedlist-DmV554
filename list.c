@@ -100,10 +100,21 @@ void pushBack(List * list, void * data) {
 
 void pushCurrent(List * list, void * data) {
   Node * nodoAInsertar = createNode(data);
-
-  list->current->next = nodoAInsertar;
-
+  
   nodoAInsertar->prev = list->current;
+  
+  if(list->current != NULL) {
+    list->current->next = nodoAInsertar;
+    
+  } else {
+    list->head = nodoAInsertar;
+    list->tail = nodoAInsertar;
+    list->current = nodoAInsertar;
+  }
+
+  
+
+ 
 
   
 }
