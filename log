@@ -51,3 +51,14 @@ Tue 21 Mar 2023 01:11:48 AM UTC:
  tests:  1|5
 total_score: 10/70
 a07735b
+Tue 21 Mar 2023 01:12:05 AM UTC: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+list.c: In function ‘firstList’:
+list.c:41:11: error: unused variable ‘cabeza’ [-Werror=unused-variable]
+   41 |     Node *cabeza = list->head;
+      |           ^~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+c9ad0c6
