@@ -174,3 +174,9 @@ list.c:85:10: error: variable ‘nodoAInsertar’ set but not used [-Werror=unus
 cc1: all warnings being treated as errors
 Compilation failed
 d14ed0e
+Tue 21 Mar 2023 01:41:38 AM UTC: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  9|3
+total_score: 35/70
+69a974a
