@@ -140,7 +140,7 @@ void * popCurrent(List * list) {
         return NULL;
     }
 
-    void* dato = current->data;
+    void* dato = list->current->data;
 
     if (list->current == list->head) {
         list->head = list->current->next;
