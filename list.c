@@ -38,13 +38,13 @@ List * createList() {
 }
 
 void * firstList(List * list) {
-    Node *cabeza = list->head;
-    list->current->next = cabeza;
-    list->current = cabeza;
+  if(list==NULL || list->head == NULL ) {
+    return NULL;
+  }
 
-    void*dato = cabeza->data;
+    list->current = list->head;
   
-    return dato;
+    return list->head->data;
 }
 
 void * nextList(List * list) {
