@@ -39,7 +39,7 @@ List * createList() {
 
 void * firstList(List * list) {
     Node *cabeza = list->head;
-    //list->current->next = list->head;
+    list->current->next = cabeza;
     //list->current = cabeza;
 
     //void*dato = cabeza->data;
