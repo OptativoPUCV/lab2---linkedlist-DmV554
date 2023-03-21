@@ -164,7 +164,7 @@ void * popCurrent(List * list) {
     }
     free(list->current); // Liberar la memoria del nodo eliminado
     return dato;
-}
+
 
 }
 
