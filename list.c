@@ -101,8 +101,8 @@ void pushBack(List * list, void * data) {
 void pushCurrent(List * list, void * data) {
   Node * nodoAInsertar = createNode(data);
   
- // nodoAInsertar->prev = NULL;
-  //nodoAInsertar->next = NULL;
+   nodoAInsertar->prev = NULL;
+   nodoAInsertar->next = NULL;
   
   if(list->current != NULL) {
     nodoAInsertar->next = list->current->next;
@@ -135,7 +135,22 @@ void * popBack(List * list) {
 }
 
 void * popCurrent(List * list) {
+
+  if(list == NULL || list->current == NULL) {
     return NULL;
+  }
+
+  if(list->current->prev != NULL) {
+    list->current->prev = list->current->next;
+  }
+
+  if(list->current->next != NULL) {
+    list->current->next->prev = list->current->prev;
+  }
+
+  free(list->current);
+  
+  return list->current->data;
 }
 
 void cleanList(List * list) {
