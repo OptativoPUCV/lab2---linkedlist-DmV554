@@ -140,6 +140,8 @@ void * popCurrent(List * list) {
     return NULL;
   }
 
+  void*dato = list->current->data;
+
   if(list->current->prev != NULL) {
     list->current->prev->next = list->current->next;
   } else {
@@ -159,7 +161,7 @@ void * popCurrent(List * list) {
 
   free(list->current);
   
-  return list->current->data;
+  return dato;
 }
 
 void cleanList(List * list) {
